@@ -1,0 +1,26 @@
+/*
+html, body, .container-fluid, .row {
+	height: 100%;
+}
+
+.sidebar_tests1 {
+	background-color: #CCCCCC;
+}
+
+@media (min-width: 992px) {
+	.sidebar_tests1 {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		display: block;
+		background-color: #CCCCCC;
+		padding-bottom: 100%;
+	}
+}
+
+.my_footer {
+	color: orange;
+}
+*/
+

@@ -1,0 +1,188 @@
+#calendar_mobile_phmanagement table.calendar {
+	border-collapse: collapse;
+}
+/* ======================================== */
+#calendar_mobile_phmanagement table.calendar thead {
+	margin-bottom: 3px;
+	background-color: #888;
+	color: white;
+}
+#calendar_mobile_phmanagement table.calendar thead th {
+	padding: 10px 3px;
+	font-weight: normal;
+}
+#calendar_mobile_phmanagement table.calendar thead th.bolder {
+	font-weight: bold;
+}
+/* ======================================== */
+#calendar_mobile_phmanagement table.calendar tbody {
+	font-size: 0.8em;
+}
+#calendar_mobile_phmanagement table.calendar td {
+	padding: 6px;
+	background-color: white;
+	border: 1px solid rgba(185, 185, 185, 0.13);
+	text-align: center;
+	cursor: pointer;
+	pointer-events: auto;
+}
+#calendar_mobile_phmanagement table.calendar tr:last-child td {
+	/* border-bottom: none; */
+}
+#calendar_mobile_phmanagement table.calendar td.month-name {
+	/* border-left: none; */
+	font-weight: bold;
+	text-align: left;
+	cursor: default;
+}
+#calendar_mobile_phmanagement table.calendar td.prev-month,
+#calendar_mobile_phmanagement table.calendar td.next-month {
+	color: transparent;
+	cursor: default;
+	pointer-events: none;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAABZJREFUCB1jYEADmzdv/o8iRA0BoIEAKngPeSAlnXcAAAAASUVORK5CYII=');
+}
+#calendar_mobile_phmanagement table.calendar td.week-separator {
+	width: 8px;
+	min-width: 0;
+	padding: 0;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAABZJREFUCB1jYEADmzdv/o8iRA0BoIEAKngPeSAlnXcAAAAASUVORK5CYII=');
+	pointer-events: none;
+}
+#calendar_mobile_phmanagement table.calendar td.bolder {
+	font-weight: bold;
+}
+
+/* Single selected day */
+#calendar_mobile_phmanagement table.calendar td.selected {
+	background-color: orangered;
+	color: white;
+	font-weight: bold;
+}
+
+/* ======================================== */
+#calendar_mobile_phmanagement table.calendar td.weekend {
+	/*background: #E8E8E8;
+	font-style: italic;
+	font-weight: bold;
+	pointer-events: none;*/
+}
+#calendar_mobile_phmanagement table.calendar td.public_holidays {
+	background: #5F9EA0;
+	color: white;
+	font-weight: bold;
+	pointer-events: none;
+}
+#calendar_mobile_phmanagement table.calendar td.vacation_days {
+	background: #FFA07A;
+	color: white;
+	font-weight: bold;
+	pointer-events: none;
+}
+#calendar_mobile_phmanagement table.calendar td.other_days {
+	background: #B84B9E;
+	color: white;
+	font-weight: bold;
+	pointer-events: none;
+}
+
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+/* §§§§§§§§§§ MOBILE §§§§§§§§§§ */
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§
+@media screen and (max-width: 1200px) {
+	#calendar_mobile_phmanagement {
+		width: 100%;
+		min-width: 100%;
+		margin: 0px;
+	}
+
+	#calendar_mobile_phmanagement table.calendar {
+		width: 100%;
+		min-width: 235px;
+	}
+
+	#calendar_mobile_phmanagement table.calendar td {
+		width: calc(100% / 7 - 2px * 7 - 4px);
+		display: inline-block;
+	}
+
+	#calendar_mobile_phmanagement table.calendar td.week-separator {
+		display: none;
+	}
+
+	#calendar_mobile_phmanagement table.calendar td.month-name {
+		width: 100%;
+		text-align: center;
+	}
+
+	#calendar_mobile_phmanagement table.calendar td.prev-month, #calendar_mobile_phmanagement table.calendar td.next-month {
+		border-color: transparent;
+	}
+
+	#calendar_mobile_phmanagement table.calendar thead {
+		display: none;
+	}
+}
+ */
+
+@media (max-width: 1275px) {
+	/* Reset margin & padding all across the calendar */
+	#calendar_mobile_phcontainer #calendar_mobile_phmanagement * {
+		
+	}
+
+	#calendar_mobile_phcontainer #calendar_mobile_phmanagement {
+		border: 0px solid #5A5A5A;
+		margin: 10px 0 0 0;
+	}
+	/* ======================================== */
+	#calendar_mobile_phmanagement table.calendar {
+		border-collapse: colapse;
+		border-spacing: 0;
+	}
+	/* ======================================== */
+	#calendar_mobile_phmanagement table.calendar thead {
+		display: none;
+	}
+	#calendar_mobile_phmanagement table.calendar thead th {
+		
+	}
+	#calendar_mobile_phmanagement table.calendar thead th.bolder {
+		
+	}
+	/* ======================================== */
+	#calendar_mobile_phmanagement table.calendar tbody {
+		
+	}
+	#calendar_mobile_phmanagement table.calendar tr {
+		/* background: #868E96; */
+		display: block;
+		background: #FFF;
+	}
+
+	#calendar_mobile_phmanagement table.calendar td {
+		/* width: calc(100% / 7 - 2px * 7 - 5px); */
+		width: calc(100% / 7);
+		display: inline-block;
+	}
+	#calendar_mobile_phmanagement table.calendar tr:last-child td {
+		
+	}
+	#calendar_mobile_phmanagement table.calendar td.month-name {
+		width: 100%;
+		background: #CCC;
+		text-align: center;
+	}
+	#calendar_mobile_phmanagement table.calendar td.prev-month,
+	#calendar_mobile_phmanagement table.calendar td.next-month {
+		background: #FFF;
+		padding: 15px;
+		border: none;
+	}
+	#calendar_mobile_phmanagement table.calendar td.week-separator {
+		display: none;
+	}
+	#calendar_mobile_phmanagement table.calendar td.bolder {
+		
+	}
+}

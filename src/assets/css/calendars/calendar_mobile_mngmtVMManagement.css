@@ -1,0 +1,185 @@
+#calendar_mobile_mngmtvmmanagement table.calendar {
+	border-collapse: collapse;
+}
+/* ======================================== */
+#calendar_mobile_mngmtvmmanagement table.calendar thead {
+	margin-bottom: 3px;
+	background-color: #888;
+	color: white;
+}
+#calendar_mobile_mngmtvmmanagement table.calendar thead th {
+	padding: 10px 3px;
+	font-weight: normal;
+}
+#calendar_mobile_mngmtvmmanagement table.calendar thead th.bolder {
+	font-weight: bold;
+}
+/* ======================================== */
+#calendar_mobile_mngmtvmmanagement table.calendar tbody {
+	font-size: 0.8em;
+}
+#calendar_mobile_mngmtvmmanagement table.calendar td {
+	padding: 6px;
+	background-color: white;
+	border: 1px solid rgba(185, 185, 185, 0.13);
+	text-align: center;
+	cursor: pointer;
+	pointer-events: none;
+}
+#calendar_mobile_mngmtvmmanagement table.calendar tr:last-child td {
+	
+}
+#calendar_mobile_mngmtvmmanagement table.calendar td.month-name {
+	font-weight: bold;
+	text-align: left;
+	cursor: default;
+}
+#calendar_mobile_mngmtvmmanagement table.calendar td.prev-month,
+#calendar_mobile_mngmtvmmanagement table.calendar td.next-month {
+	color: transparent;
+	cursor: default;
+	pointer-events: none;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAABZJREFUCB1jYEADmzdv/o8iRA0BoIEAKngPeSAlnXcAAAAASUVORK5CYII=');
+}
+#calendar_mobile_mngmtvmmanagement table.calendar td.week-separator {
+	width: 8px;
+	min-width: 0;
+	padding: 0;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAABZJREFUCB1jYEADmzdv/o8iRA0BoIEAKngPeSAlnXcAAAAASUVORK5CYII=');
+	pointer-events: none;
+}
+#calendar_mobile_mngmtvmmanagement table.calendar td.bolder {
+	font-weight: bold;
+}
+
+/* Single selected day
+#calendar_mobile_mngmtvmmanagement table.calendar td.selected {
+	background-color: orangered;
+	color: white;
+	font-weight: bold;
+} */
+
+/* ======================================== */
+#calendar_mobile_mngmtvmmanagement table.calendar td.weekend {
+	background: #E8E8E8;
+	font-style: italic;
+	font-weight: bold;
+	pointer-events: none;
+}
+#calendar_mobile_mngmtvmmanagement table.calendar td.public_holidays {
+	/* color: red; */
+	background: #5F9EA0;
+	color: white;
+	font-weight: bold;
+	pointer-events: none;
+}
+#calendar_mobile_mngmtvmmanagement table.calendar td.vacation_days {
+	background: #FFA07A;
+	color: white;
+	font-weight: bold;
+	pointer-events: none;
+}
+#calendar_mobile_mngmtvmmanagement table.calendar td.other_days {
+	background: #B84B9E;
+	color: white;
+	font-weight: bold;
+	pointer-events: none;
+}
+
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+/* §§§§§§§§§§ MOBILE §§§§§§§§§§ */
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+
+ @media (max-width: 1275px) {
+	#myApproveRejectVMModal #calendar_header {
+		background: white;
+		color: #343a40;
+		border: none;
+		border-radius: 0;
+		text-align: center;
+	}
+
+	/* Reset margin & padding all across the calendar */
+	 #myApproveRejectVMModal #calendar_mobile_mngmtvmmanagement * {
+		margin: 0;
+	}
+
+	 #myApproveRejectVMModal #calendar_mobile_mngmtvmmanagement {
+		border: 0;
+		margin: -38px 0 -30px 0;
+	}
+	/* ======================================== */
+	#myApproveRejectVMModal #calendar_mobile_mngmtvmmanagement table.calendar {
+		border-collapse: separate; 
+		border-spacing: 0 3em;
+	}
+	/* ======================================== */
+	#myApproveRejectVMModal #calendar_mobile_mngmtvmmanagement table.calendar thead {
+		display: none;
+	}
+	#myApproveRejectVMModal #calendar_mobile_mngmtvmmanagement table.calendar thead th {
+		
+	}
+	#myApproveRejectVMModal #calendar_mobile_mngmtvmmanagement table.calendar thead th.bolder {
+		
+	}
+	/* ======================================== */
+	#myApproveRejectVMModal #calendar_mobile_mngmtvmmanagement table.calendar tbody {
+		
+	}
+	#myApproveRejectVMModal #calendar_mobile_mngmtvmmanagement table.calendar tr {
+		
+	}
+
+	#myApproveRejectVMModal #calendar_mobile_mngmtvmmanagement table.calendar td {
+		/* width: calc(100% / 7 - 2px * 7 - 5px); */
+		width: calc(100% / 7);
+		display: inline-block;
+		border: 1px solid rgba(185, 185, 185, 0.33);
+	}
+	#myApproveRejectVMModal #calendar_mobile_mngmtvmmanagement table.calendar tr:last-child td {
+		border: 1px solid rgba(185, 185, 185, 0.33);
+	}
+	#myApproveRejectVMModal #calendar_mobile_mngmtvmmanagement table.calendar td.month-name {
+		width: 100%;
+		background: #CCC;
+		text-align: center;
+	}
+	#myApproveRejectVMModal #calendar_mobile_mngmtvmmanagement table.calendar td.prev-month,
+	#myApproveRejectVMModal #calendar_mobile_mngmtvmmanagement table.calendar td.next-month {
+		background: #FFF;
+		padding: 15px;
+		border: none;
+	}
+	#myApproveRejectVMModal #calendar_mobile_mngmtvmmanagement table.calendar td.week-separator {
+		display: none;
+	}
+	#myApproveRejectVMModal #calendar_mobile_mngmtvmmanagement table.calendar td.bolder {
+		
+	}
+	/* ======================================== */
+	#myApproveRejectVMModal table tr td.totalMonth {
+		float: right;
+		background: #888;
+		color: white;
+		font-weight: bold;
+	}
+
+	#myApproveRejectVMModal table tr td.totalMonth::before {
+		width: 200px;
+		content: "Total: ";
+	}
+
+	#myApproveRejectVMModal table tr:last-of-type td.totalMonth {
+		background-color: #888;
+		border-bottom: 0;
+	}
+
+	#myApproveRejectVMModal .yearTotalCell {
+		background: #666;
+		color: white;
+		font-weight: bold;
+		margin: -5px 0 0 0;
+		border: 1px solid #5A5A5A;
+	}
+ }

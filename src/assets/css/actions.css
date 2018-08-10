@@ -1,0 +1,1196 @@
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ Generic stuff §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+
+.generalMsg {
+	margin: 10px 0 0 0;
+	color: RoyalBlue;
+	font-weight: bold;
+	text-align: center;
+}
+.generalErrMsg {
+	margin: 10px 0 0 0;
+	color: red;
+	font-weight: bold;
+	text-align: center;
+}
+
+.btn { cursor: pointer; }
+.btn-default { width: 100px; }
+.form-group.required .control-label:after { content: " *"; color: red; }
+.form-control.frm-login { color: gray !important; }
+textarea { resize: none; }
+.frmsmall { width: 75px; }
+.frmmedium { width: 200px; }
+.frmlarge { width: 500px; }
+
+.clickable-row-active {
+	background-color: #FFFFE0;
+	font-weight: bold;
+}
+.list-group-item-active {
+	background-color: #FFFFE0;
+	font-weight: bold;
+	border: 1px solid #FF8C00;
+}
+
+.No-Match {
+	width: 500px;
+	padding: 40px;
+	margin: 250px auto;
+	background-color: black;
+	color: #999;
+	font-family: "sans-serif";
+	font-size: 44px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.smallLegendSquares {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin: 7px 0 -1px 10px;
+	border: 1px solid rgba(0, 0, 0, .2);
+}
+.smallLegendSquares:first-child {
+	margin: 7px 0 -1px 5px;
+}
+
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ Employees §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+
+/* ************ General ************ */
+
+/* Higher than 1275px */
+@media (min-width: 1275px) {
+	#publicHolidayList {
+		width: 1028px;
+	}
+}
+
+/* Up to 1275px */
+@media (max-width: 1275px) {
+	#publicHolidayList {
+		width: auto;
+	}
+}
+
+/* ************ EmployeeVacationMapView ************ */
+#emplVMView_container {
+	display: inline-block;
+	width: auto;
+}
+#emplVMView_container #calendar_header * { margin: 0; padding: 0; }
+#emplVMView_container #calendar_header {
+	margin: 0;
+	padding: 8px 10px 6px 0;
+	background: #FF7F50;
+	color: white;
+	border: 0px solid #FF7F50;
+	border-radius: 10px 10px 0 0;
+	text-align: right;
+}
+
+#emplVMView_container #calendar_mobile_emplvmview {
+	display: inline-block;
+	border: 1px solid #5A5A5A;
+}
+
+#emplVMView_container .totalHeader {
+	background: #D3D3D3;
+	border-left: 1px solid #5A5A5A;
+	border-bottom: 1px solid #5A5A5A;
+	color: #666;
+	font-weight: bold;
+}
+
+#emplVMView_container table tr td:nth-last-child(2) {
+	border-right: 1px solid #5A5A5A;
+}
+
+#emplVMView_container table tr td.totalMonth {
+	background-color: #D3D3D3;
+	border-bottom: 1px solid #5A5A5A;
+}
+
+#emplVMView_container table tr:last-of-type td.totalMonth {
+	background-color: #D3D3D3;
+	border-bottom: 0;
+}
+
+#emplVMView_container .yearTotalCell {
+	width: 58px;
+	margin: -6px 0 0 0;
+	padding: 4px 0;
+	background-color: #FF7F50;
+	border-bottom: 1px solid #5A5A5A;
+	border-left: 1px solid #5A5A5A;
+	border-right: 1px solid #5A5A5A;
+	text-align: center;
+}
+
+/* ************ EmployeeVacationMapEdit ************ */
+#emplVMEdit_container {
+	display: inline-block;
+	width: auto;
+}
+#emplVMEdit_container #calendar_header * { margin: 0; padding: 0; }
+#emplVMEdit_container #calendar_header {
+	margin: 0;
+	padding: 8px 10px 6px 0;
+	background: #FF7F50;
+	color: white;
+	border: 0px solid #FF7F50;
+	border-radius: 10px 10px 0 0;
+	text-align: right;
+}
+#emplVMEdit_container #calendar_mobile_emplvmedit {
+	display: inline-block;
+	border: 1px solid #5A5A5A;
+}
+
+#emplVMEdit_container #calendar_buttons {
+	
+}
+
+#emplVMEdit_container .totalHeader {
+	background: #D3D3D3;
+	border-left: 1px solid #5A5A5A;
+	border-bottom: 1px solid #5A5A5A;
+	color: #666;
+	font-weight: bold;
+}
+
+#emplVMEdit_container table tr td:nth-last-child(2) {
+	border-right: 1px solid #5A5A5A;
+}
+
+#emplVMEdit_container table tr td.totalMonth {
+	background-color: #D3D3D3;
+	border-bottom: 1px solid #5A5A5A;
+}
+
+#emplVMEdit_container table tr:last-of-type td.totalMonth {
+	background-color: #D3D3D3;
+	border-bottom: 0;
+}
+
+#emplVMEdit_container .yearTotalCell {
+	width: 58px;
+	margin: -6px 0 0 0;
+	padding: 4px 0;
+	background-color: #FF7F50;
+	border-bottom: 1px solid #5A5A5A;
+	border-left: 1px solid #5A5A5A;
+	border-right: 1px solid #5A5A5A;
+	text-align: center;
+}
+
+/* ************ EmployeeVacationMapHistory ************ */
+#emplVMHistory_container {
+	display: inline-block;
+	width: auto;
+}
+
+#emplVMHistory_container #calendar_mobile_calendarcontrols {
+	margin: 0;
+	padding: 0;
+}
+
+#emplVMHistory_container #calendar_mobile_emplvmhistory {
+	display: inline-block;
+	border: 1px solid #5A5A5A;
+}
+
+#emplVMHistory_container .totalHeader {
+	background: #D3D3D3;
+	border-left: 1px solid #5A5A5A;
+	border-bottom: 1px solid #5A5A5A;
+	color: #666;
+	font-weight: bold;
+}
+
+#emplVMHistory_container table tr td:nth-last-child(2) {
+	border-right: 1px solid #5A5A5A;
+}
+
+#emplVMHistory_container table tr td.totalMonth {
+	background-color: #D3D3D3;
+	border-bottom: 1px solid #5A5A5A;
+}
+
+#emplVMHistory_container table tr:last-of-type td.totalMonth {
+	background-color: #D3D3D3;
+	border-bottom: 0;
+}
+
+#emplVMHistory_container .yearTotalCell {
+	width: 58px;
+	margin: -6px 0 0 0;
+	padding: 4px 0;
+	background-color: #FF7F50;
+	border-bottom: 1px solid #5A5A5A;
+	border-left: 1px solid #5A5A5A;
+	border-right: 1px solid #5A5A5A;
+	text-align: center;
+}
+
+/* If [device width] is greater than or equal to 1275px */
+@media (min-width: 1275px) {
+	#emplVMHistoryList {
+		display: inline-block;
+		width: 998px;
+		margin-top: 7px;
+	}
+}
+
+/* No greater than 1275px, no less than 1275px */
+@media (max-width: 1275px) and (min-width: 600px) {
+	#emplVMHistoryList {
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+/* Up to 600px */
+@media (max-width: 600px) {
+	#emplVMHistoryList {
+		display: inline-block;
+		width: 100%;
+		font-size: 0.8125rem;
+	}
+}
+
+#emplVMHistoryList table tr td {
+	cursor: pointer;
+}
+
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ Management §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+
+/* ************ ManagementVacationMapManagement ************ */
+
+/* If [device width] is less than or equal to 992px */
+@media (max-width: 992px) {
+	.mngmtvmmanagement_content {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+/* If [device width] is greater than or equal to 1275px */
+@media (min-width: 1275px) {
+	.mngmtvmmanagement_content {
+		width: 1010px;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.mngmtvmmanagement_content .form-group {
+	text-align: center;
+	margin: auto;
+}
+
+.mngmtvmmanagement_content select.form-control {
+	display: inline-block; 
+	width: 100px;
+}
+
+.mngmtvmmanagement_content #pendingVMList {
+	margin-top: 20px;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+#pendingVMList > .table > tbody > tr > td {
+	cursor: pointer;
+}
+
+#pendingVMList > .table > tbody > tr > td.vmEmployeeName, 
+#pendingVMList > .table > tbody > tr > td.vmMapVersion {
+	width: 45%;
+	padding-top: 15px;
+}
+
+#pendingVMList > .table > tbody > tr > td.vmApprove, 
+#pendingVMList > .table > tbody > tr > td.vmReject {
+	width: 5%;
+}
+
+/*
+#myApproveRejectVMModal .modal-lg {
+	max-width: 1045px;
+}
+*/
+
+/* Greater than 1100px */
+@media (min-width: 1100px) {
+	#myApproveRejectVMModal .modal-lg {
+		/* max-width: 1045px; */
+		max-width: 1102px;
+	}
+}
+
+/* Up to 1100px */
+@media (max-width: 1100px) {
+	#myApproveRejectVMModal .modal-lg {
+		max-width: 100%;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+
+#myApproveRejectVMModal .modal-body {
+	background-color: white;
+	padding-top: 0;
+}
+
+#myApproveRejectVMModal #calendar_header * { margin: 0; padding: 0; }
+#myApproveRejectVMModal #calendar_header {
+	max-width: 1070px;
+	margin: 15px 0 0 15px;
+	padding: 6px 10px 6px 0;
+	background: #FF7F50;
+	color: white;
+	border: 0px solid #FF7F50;
+	border-radius: 10px 10px 0 0;
+	text-align: right;
+}
+
+#myApproveRejectVMModal #calendar_mobile_mngmtvmmanagement {
+	display: inline-block;
+	border: 1px solid #5A5A5A;
+}
+
+#myRejectConfirmVMModal .modal-lg {
+	max-width: 600px;
+}
+
+#myApproveRejectVMModal .totalHeader {
+	background: #D3D3D3;
+	border-left: 1px solid #5A5A5A;
+	border-bottom: 1px solid #5A5A5A;
+	color: #666;
+	font-weight: bold;
+}
+
+#myApproveRejectVMModal table tr td:nth-last-child(2) {
+	border-right: 1px solid #5A5A5A;
+}
+
+#myApproveRejectVMModal table tr td.totalMonth {
+	background-color: #D3D3D3;
+	border-bottom: 1px solid #5A5A5A;
+}
+
+#myApproveRejectVMModal table tr:last-of-type td.totalMonth {
+	background-color: #D3D3D3;
+	border-bottom: 0;
+}
+
+#myApproveRejectVMModal .yearTotalCell {
+	width: 58px;
+	margin: -6px 0 0 0;
+	padding: 4px 0;
+	background-color: #FF7F50;
+	border-bottom: 1px solid #5A5A5A;
+	border-left: 1px solid #5A5A5A;
+	border-right: 1px solid #5A5A5A;
+	text-align: center;
+}
+
+/* ************ ManagementVacationMapHistory ************ */
+
+#mngmtvmhistory_content {
+	display: inline-block;
+	width: auto;
+}
+
+/* ===== COL-LEFT ===== */
+
+/* Greater than 1600px */
+@media (min-width: 1600px) {
+	#mngmtvmhistory_content #mngmtvmhistory_row1_left {
+		display: inline-block;
+		width: 300px;
+	}
+}
+
+/* No greater than 1600px, no less than 1275px */
+@media (max-width: 1600px) and (min-width: 1275px) {
+	#mngmtvmhistory_content #mngmtvmhistory_row1_left {
+		display: inline-block;
+		width: 1013px;
+	}
+}
+
+/* Up to 1275px */
+@media (max-width: 1275px) {
+	#mngmtvmhistory_content #mngmtvmhistory_row1_left {
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+#mngmtvmhistory_row1_left #accordion .card:first-of-type {
+	margin-bottom: 10px;
+}
+
+#mngmtvmhistory_row1_left #accordion .card:last-of-type {
+	
+}
+
+#mngmtvmhistory_row1_left .card-header {
+	padding: 0;
+}
+
+#mngmtvmhistory_row1_left .card-header a:hover, 
+#mngmtvmhistory_row1_left .card-header a:visited, 
+#mngmtvmhistory_row1_left .card-header a:link, 
+#mngmtvmhistory_row1_left .card-header a:active {
+	display: block;
+	width: auto;
+	margin: 0;
+	padding: 10px;
+	color: #868E96;
+}
+
+#mngmtvmhistory_row1_left .card-body {
+	padding: 10px;
+}
+
+#mngmtvmhistory_row1_left .list-group {
+	max-height: 358px;
+	overflow-y: scroll;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#mngmtvmhistory_row1_left .list-group.solo {
+	max-height: 100%;
+	overflow-y: scroll;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#mngmtvmhistory_row1_left .list-group-item:first-of-type {
+	margin: 0;
+}
+
+#mngmtvmhistory_row1_left .list-group-item {
+	margin: 5px 0 0 0;
+	padding: 10px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#mngmtvmhistory_row1_left .list-group-item:hover {
+	background: lightyellow;
+}
+
+/* ===== COL-RIGHT ===== */
+
+/* Greater than 1600px */
+@media (min-width: 1600px) {
+	#mngmtvmhistory_content #mngmtvmhistory_row1_right {
+		display: inline-block;
+		width: auto;
+		vertical-align: top;
+		margin: 0 0 0 10px;
+	}
+}
+
+/* Up to 1600px */
+@media (max-width: 1600px) {
+	#mngmtvmhistory_content #mngmtvmhistory_row1_right {
+		display: inline-block;
+		width: auto;
+		vertical-align: top;
+		margin: 10px 0 0 0;
+	}
+}
+
+/* ===== VM History ===== */
+
+/* Greater than 1600px */
+@media (min-width: 1600px) {
+	#mngmtVMHistoryList {
+		display: inline-block;
+		width: 1308px;
+		margin-top: 7px;
+	}
+}
+
+/* No greater than 1600px, no less than 1275px */
+@media (max-width: 1600px) and (min-width: 1275px) {
+	#mngmtVMHistoryList {
+		display: inline-block;
+		width: 998px;
+	}
+}
+
+/* Up to 1275px */
+@media (max-width: 1275px) {
+	#mngmtVMHistoryList {
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+/* Up to 600px */
+@media (max-width: 600px) {
+	#mngmtVMHistoryList {
+		display: inline-block;
+		width: 100%;
+		font-size: 0.8125rem;
+	}
+}
+
+/* ===== Calendar ===== */
+#mngmtvmhistory_row1_right #calendar_mobile_mngmtvmhistory {
+	display: inline-block;
+	border: 1px solid #5A5A5A;
+}
+
+#mngmtvmhistory_row1_right .totalHeader {
+	background: #D3D3D3;
+	border-left: 1px solid #5A5A5A;
+	border-bottom: 1px solid #5A5A5A;
+	color: #666;
+	font-weight: bold;
+}
+
+#mngmtvmhistory_row1_right table tr td:nth-last-child(2) {
+	border-right: 1px solid #5A5A5A;
+}
+
+#mngmtvmhistory_row1_right table tr td.totalMonth {
+	background-color: #D3D3D3;
+	border-bottom: 1px solid #5A5A5A;
+}
+
+#mngmtvmhistory_row1_right table tr:last-of-type td.totalMonth {
+	background-color: #D3D3D3;
+	border-bottom: 0;
+}
+
+#mngmtvmhistory_row1_right .yearTotalCell {
+	width: 58px;
+	margin: -6px 0 0 0;
+	padding: 4px 0;
+	background-color: #FF7F50;
+	border-bottom: 1px solid #5A5A5A;
+	border-left: 1px solid #5A5A5A;
+	border-right: 1px solid #5A5A5A;
+	text-align: center;
+}
+
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ HR §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+
+/* Greater than 1275px */
+@media (min-width: 1275px) {
+	.hrvmcreate_content, .hrvmedit_content {
+		display: inline-block;
+		width: 1000px;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+/* Up to 1275px */
+@media (max-width: 1275px) {
+	.hrvmcreate_content, .hrvmedit_content {
+		display: inline-block;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.hrvmcreate_content .form-group, .hrvmedit_content .form-group {
+	text-align: center;
+	margin: auto;
+}
+
+.hrvmcreate_content select.form-control, .hrvmedit_content select.form-control {
+	display: inline-block; 
+	width: 100px;
+}
+
+.row:first-of-type .hrvmcreate_content, .row:first-of-type .hrvmedit_content {
+	margin: 0 0 15px 0;
+}
+
+.row:last-of-type .hrvmcreate_content, .row:last-of-type .hrvmedit_content {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+/* ===== COL-LEFT ===== */
+
+/* Greater than 1275px */
+@media (min-width: 1275px) {
+	#hrvmcreate_col_left, #hrvmedit_col_left {
+		display: inline-block;
+		vertical-align: top;
+		width: 300px;
+	}
+}
+
+/* Up to 1275px */
+@media (max-width: 1275px) {
+	#hrvmcreate_col_left, #hrvmedit_col_left {
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+	}
+}
+
+#hrvmcreate_col_left #accordion .card:first-of-type, #hrvmedit_col_left #accordion .card:first-of-type {
+	margin-bottom: 10px;
+}
+
+#hrvmcreate_col_left #accordion .card:last-of-type, #hrvmedit_col_left #accordion .card:last-of-type {
+	
+}
+
+#hrvmcreate_col_left .card-header, #hrvmedit_col_left .card-header {
+	padding: 0;
+}
+
+#hrvmcreate_col_left .card-header a:hover, 
+#hrvmcreate_col_left .card-header a:visited, 
+#hrvmcreate_col_left .card-header a:link, 
+#hrvmcreate_col_left .card-header a:active,
+#hrvmedit_col_left .card-header a:hover, 
+#hrvmedit_col_left .card-header a:visited, 
+#hrvmedit_col_left .card-header a:link, 
+#hrvmedit_col_left .card-header a:active {
+	display: block;
+	width: auto;
+	margin: 0;
+	padding: 10px;
+	color: #868E96;
+}
+
+#hrvmcreate_col_left .card-body, #hrvmedit_col_left .card-body {
+	padding: 10px;
+}
+
+#hrvmcreate_col_left .list-group, #hrvmedit_col_left .list-group {
+	max-height: 358px;
+	overflow-y: scroll;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#hrvmcreate_col_left .list-group-item:first-of-type, #hrvmedit_col_left .list-group-item:first-of-type {
+	margin: 0;
+}
+
+#hrvmcreate_col_left .list-group-item, #hrvmedit_col_left .list-group-item {
+	margin: 5px 0 0 0;
+	padding: 10px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#hrvmcreate_col_left .list-group-item:hover, #hrvmedit_col_left .list-group-item:hover {
+	background: lightyellow;
+}
+
+/* ===== COL-RIGHT ===== */
+
+/* Greater than 1275px */
+@media (min-width: 1275px) {
+	#hrvmcreate_col_right, #hrvmedit_col_right {
+		display: inline-block;
+		width: 690px;
+		margin: 0 0 0 10px;
+		padding: 0;
+	}
+}
+
+/* Up to 1275px */
+@media (max-width: 1275px) {
+	#hrvmcreate_col_right, #hrvmedit_col_right {
+		display: inline-block;
+		width: 100%;
+		margin: 10px 0 0 0;
+		padding: 0;
+	}
+}
+
+/* ===== COL-RIGHT ROW 1 ===== */
+#hrvmcreate_col_right_row1, #hrvmedit_col_right_row1 {
+	display: block;
+}
+
+#hrvmcreate_col_right_row1 .card, #hrvmedit_col_right_row1 .card {
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+/* Greater than 1275px */
+@media (min-width: 1275px) {
+	#hrvmcreate_col_right_row1 .card-body-container, #hrvmedit_col_right_row1 .card-body-container {
+		width: 600px;
+		margin: 0 auto;
+		padding: 1px;
+	}
+}
+
+/* Up to 1275px */
+@media (max-width: 1275px) {
+	#hrvmcreate_col_right_row1 .card-body-container, #hrvmedit_col_right_row1 .card-body-container {
+		width: 100;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+#hrvmcreate_col_right_row1 .card-body-container .row, #hrvmedit_col_right_row1 .card-body-container .row {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#hrvmcreate_col_right_row1 .card-body-container .row:first-of-type, #hrvmedit_col_right_row1 .card-body-container .row:first-of-type {
+	margin-bottom: 10px;
+}
+
+#hrvmcreate_col_right_row1 .rowCaption, #hrvmedit_col_right_row1 .rowCaption {
+	float: left;
+	width: 40%;
+	margin: 7px 0 0 0;
+	padding: 0 0 0 20px;
+}
+
+#hrvmcreate_col_right_row1 .rowFF, #hrvmedit_col_right_row1 .rowFF {
+	float: left;
+	width: 15%;
+}
+
+#hrvmcreate_col_right_row1 .rowErrMsg, #hrvmedit_col_right_row1 .rowErrMsg {
+	float: left;
+	width: 45%;
+	margin: 7px 0 0 0;
+	padding: 0 0 0 10px;
+	color: red;
+	font-weight: bold;
+}
+
+/* ===== COL-RIGHT ROW 2 ===== */
+#hrvmcreate_col_right_row2, #hrvmedit_col_right_row2 {
+	display: block;
+}
+
+/* ===== COL-RIGHT ROW 3 ===== */
+#hrvmcreate_col_right_row3, #hrvmedit_col_right_row3 {
+	display: block;	
+}
+
+/* ************ HRPublicHolidaysManagement ************ */
+
+/* Greater than 1275px */
+@media (min-width: 1275px) {
+	.hrpublicholidays_content {
+		display: inline-block;
+		width: 1000px;
+		margin: 0;
+		padding: 0;
+	}
+}
+/* Up to 1275px */
+@media (max-width: 1275px) {
+	.hrpublicholidays_content {
+		display: inline-block;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.hrpublicholidays_content select.form-control {
+	display: inline-block; 
+	width: 100px;
+}
+
+#phList > .table > tbody > tr > td.phDate {
+	width: 15%;
+	padding: 17px 0 15px 0;
+}
+
+#phList > .table > tbody > tr > td.phDesc {
+	width: 75%;
+	padding: 17px 0 15px 0;
+}
+
+#phList > .table > tbody > tr > td.phEdit, #phList > .table > tbody > tr > td.phDelete {
+	width: 5%;
+}
+
+/* ===== Calendar stuff ===== */
+#calendar_mobile_phcontainer {
+	
+}
+
+#calendar_mobile_phmanagement {
+	border: 1px solid #5A5A5A;
+}
+
+/* ===== PH create modal ===== */
+
+/* Greater than 1100px */
+@media (min-width: 1100px) {
+	#phCreateModal .modal-lg {
+		max-width: 1045px;
+	}
+
+	#phCreateModal input[type="text"], #phEditModal input[type="text"] {
+		width: 300px;
+	}
+}
+/* Up to 1100px */
+@media (max-width: 1100px) {
+	#phCreateModal .modal-lg {
+		max-width: 100%;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	#phCreateModal input[type="text"], #phEditModal input[type="text"] {
+		width: auto;
+	}
+}
+/* Up to 600px */
+@media (max-width: 600px) {
+	#phCreateModal input[type="text"], #phEditModal input[type="text"] {
+		width: auto;
+	}
+}
+
+/* ===== PH edit modal ===== */
+/* Greater than 750px */
+@media (min-width: 750px) {
+	#phEditModal .modal-lg {
+		max-width: 610px;
+	}
+}
+/* Up to 750px */
+@media (max-width: 750px) {
+	#phEditModal .modal-lg {
+		max-width: 100%;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+#publicholidayNewDescError, #publicholidayChangeDescError {
+	margin: 7px 0 0 0;
+	padding: 0;
+	color: red;
+	font-weight: bold;
+}
+
+/* ===== PH delete modal ===== */
+#phDeleteModal .modal-lg {
+	max-width: 600px;
+}
+
+/* ************ HREmployeeCreate ************ */
+
+/* Greater than 1080px */
+@media (min-width: 1080px) {
+	.hremployeecreate_content {
+		width: 810px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.hremployeecreate_content input[type="text"].large, .hremployeecreate_content input[type="email"].large { width: 500px; }
+	.hremployeecreate_content input[type="text"].medium, .hremployeecreate_content input[type="email"].medium { width: 200px; }
+	.hremployeecreate_content input[type="text"].small, .hremployeecreate_content input[type="email"].small { width: 75px; }
+}
+/* Up to 1080px */
+@media (max-width: 1080px) and (min-width: 600px) {
+	.hremployeecreate_content {
+		width: auto;
+		margin: 0;
+		padding: 0;
+	}
+
+	.hremployeecreate_content input[type="text"].large, .hremployeecreate_content input[type="email"].large { width: 500px; }
+	.hremployeecreate_content input[type="text"].medium, .hremployeecreate_content input[type="email"].medium { width: 200px; }
+	.hremployeecreate_content input[type="text"].small, .hremployeecreate_content input[type="email"].small { width: 75px; }
+}
+
+/* Up to 600px */
+@media (max-width: 600px) {
+	.hremployeecreate_content input[type="text"].large, .hremployeecreate_content input[type="email"].large { width: 320px; }
+	.hremployeecreate_content input[type="text"].medium, .hremployeecreate_content input[type="email"].medium { width: 175px; }
+	.hremployeecreate_content input[type="text"].small, .hremployeecreate_content input[type="email"].small { width: 75px; }
+}
+
+.frmErrMsg {
+	 display: inline-block;
+	 margin: 0 0 0 10px;
+	 color: red;
+	 font-weight: bold;
+}
+.hremployeecreate_content input.active:valid { box-shadow: 0 0 5px 1px green; }
+.hremployeecreate_content input.active:invalid { box-shadow: 0 0 5px 1px red; }
+
+/* ===== Approver selection modal ===== */
+#approverSelectionModal #accordion .card:first-of-type {
+	margin-bottom: 10px;
+}
+
+#approverSelectionModal #accordion .card:last-of-type {
+	
+}
+
+#approverSelectionModal .card-header {
+	padding: 0;
+}
+
+#approverSelectionModal .card-header a:hover, 
+#approverSelectionModal .card-header a:visited, 
+#approverSelectionModal .card-header a:link, 
+#approverSelectionModal .card-header a:active {
+	display: block;
+	width: auto;
+	margin: 0;
+	padding: 10px;
+	color: #868E96;
+}
+
+#approverSelectionModal .card-body {
+	padding: 10px;
+}
+
+#approverSelectionModal .list-group {
+	max-height: 358px;
+	overflow-y: scroll;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#approverSelectionModal .list-group-item:first-of-type {
+	margin: 0;
+}
+
+#approverSelectionModal .list-group-item {
+	margin: 5px 0 0 0;
+	padding: 10px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#approverSelectionModal .list-group-item:hover {
+	background: lightyellow;
+}
+
+/* ************ HREmployeesEdit ************ */
+
+#hremployeesedit_content {
+	width: auto;
+	margin: 0;
+	padding: 0;
+}
+
+/* ===== COL-LEFT ===== */
+
+/* Greater than 1400px */
+@media (min-width: 1400px) {
+	#hremployeesedit_content #hremployeesedit_left {
+		display: inline-block;
+		width: 300px;
+	}
+}
+
+/* Up to 1400px */
+@media (max-width: 1400px) {
+	#hremployeesedit_content #hremployeesedit_left {
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+#hremployeesedit_left #accordion .card:first-of-type, #approverSelectionModal #accordion_modal .card {
+	margin-bottom: 10px;
+}
+
+#hremployeesedit_left #accordion .card:last-of-type {
+	
+}
+
+#hremployeesedit_left .card-header {
+	padding: 0;
+}
+
+#hremployeesedit_left .card-header a:hover, 
+#hremployeesedit_left .card-header a:visited, 
+#hremployeesedit_left .card-header a:link, 
+#hremployeesedit_left .card-header a:active {
+	display: block;
+	width: auto;
+	margin: 0;
+	padding: 10px;
+	color: #868E96;
+}
+
+#hremployeesedit_left .card-body {
+	padding: 10px;
+}
+
+#hremployeesedit_left .list-group {
+	max-height: 358px;
+	overflow-y: scroll;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#hremployeesedit_left .list-group-item:first-of-type {
+	margin: 0;
+}
+
+#hremployeesedit_left .list-group-item {
+	margin: 5px 0 0 0;
+	padding: 10px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#hremployeesedit_left .list-group-item:hover {
+	background: lightyellow;
+}
+
+/* ===== COL-RIGHT ===== */
+
+/* Greater than 1400px */
+@media (min-width: 1400px) {
+	#hremployeesedit_content #hremployeesedit_right {
+		display: inline-block;
+		width: auto;
+		margin: 0 0 0 10px;
+		vertical-align: top;
+	}
+
+	#hremployeesedit_right input[type="text"].large, #hremployeesedit_right input[type="email"].large { width: 500px; }
+	#hremployeesedit_right input[type="text"].medium, #hremployeesedit_right input[type="email"].medium { width: 200px; }
+	#hremployeesedit_right input[type="text"].small, #hremployeesedit_right input[type="email"].small { width: 75px; }
+}
+
+/* Up to 1400px */
+@media (max-width: 1400px) {
+	#hremployeesedit_content #hremployeesedit_right {
+		display: inline-block;
+		width: 100%;
+		margin: 10px 0 0 0;
+		vertical-align: top;
+	}
+
+	#hremployeesedit_right input[type="text"].large, #hremployeesedit_right input[type="email"].large { width: 500px; }
+	#hremployeesedit_right input[type="text"].medium, #hremployeesedit_right input[type="email"].medium { width: 200px; }
+	#hremployeesedit_right input[type="text"].small, #hremployeesedit_right input[type="email"].small { width: 75px; }
+}
+
+/* Up to 600px */
+@media (max-width: 600px) {
+	#hremployeesedit_right input[type="text"].large, #hremployeesedit_right input[type="email"].large { width: 320px; }
+	#hremployeesedit_right input[type="text"].medium, #hremployeesedit_right input[type="email"].medium { width: 175px; }
+	#hremployeesedit_right input[type="text"].small, #hremployeesedit_right input[type="email"].small { width: 75px; }
+}
+
+#hremployeesedit_right input.active:valid { box-shadow: 0 0 5px 1px green; }
+#hremployeesedit_right input.active:invalid { box-shadow: 0 0 5px 1px red; }
+
+/* ************ HRGlobalVM ************ */
+
+.hrglobalvm_content select.form-control {
+	display: inline-block; 
+	width: 100px;
+}
+
+/* ===== CALENDAR ===== */
+
+.hrglobalvm_content .globalVMCalendarTable {
+	margin: 0 0 20px 0;
+	background-color: #F2F2F2;
+	color: #666;
+	border: 0px solid #A9A9A9;
+	font-size: 14px;
+	pointer-events: none;
+}
+
+.hrglobalvm_content table.globalVMCalendarTable tr td {
+	border: 1px solid #A9A9A9;
+ }
+
+.hrglobalvm_content .globalVMCalendarTable .monthCell {
+	background-color: darkorange;
+	color: white;
+	font-weight: bold;
+}
+
+.hrglobalvm_content .globalVMCalendarTable .employeeCells {
+	padding: 0 10px;
+	color: #343A40;
+	text-align: left;
+}
+
+.hrglobalvm_content .globalVMCalendarTable .weekDays {
+	width: 24px;
+	background-color: #888;
+	color: white;
+	border: 1px solid #A9A9A9;
+	font-weight: bold;
+}
+
+.hrglobalvm_content .globalVMCalendarTable .monthDayNumbers {
+	color: #888;
+	font-weight: bold;
+}
+
+.hrglobalvm_content .globalVMCalendarTable .weekendDayNumbers {
+	background-color: #DCDCDC;
+	color: #888;
+	font-weight: bold;
+}
+
+.hrglobalvm_content .globalVMCalendarTable .weekendDays {
+	background-color: #DCDCDC;
+}
+
+.hrglobalvm_content .globalVMCalendarTable .holidayDays {
+	padding: 0px;
+	background-color: white;
+	color: darkorange;
+	font-weight: bold;
+}
+
+.hrglobalvm_content .globalVMCalendarTable .publicHolidays {
+	background: #5F9EA0;
+	color: white;
+	font-weight: bold;
+}
+
+.hrglobalvm_content .globalVMCalendarTable .regularDays {
+	background-color: white;
+}
+
+.hrglobalvm_content .globalVMCalendarTable .paddingDays {
+	background-color: #888;
+}
